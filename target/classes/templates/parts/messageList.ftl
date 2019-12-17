@@ -15,14 +15,17 @@
                 <br/>
                 <i>#${message.tag}</i>
             </div>
-            <div class="card-footer text-muted">
-                <a href="/user-messages/${message.author.id}">${message.authorName}</a>
+            <div class="card-footer text-muted container">
+                <div class="row">
+                <a class="col align-self-center" href="/user-messages/${message.author.id}">${message.authorName}</a>
+                    <a href="#" class="col align-self-center"></a>
                 <#if message.author.id == currentUserId>
                     <a href="/user-messages/${message.author.id}?message=${message.id}"
-                       class="btn btn-primary">
+                       class="col btn btn-primary">
                         Edit
                     </a>
                 </#if>
+                </div>
             </div>
         </div>
     <#else >
